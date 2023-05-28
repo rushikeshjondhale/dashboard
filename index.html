@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>College Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<style>
+body,
+button {
+  font-family: "Inter", sans-serif;
+}
+:root {
+  --offcanvas-width: 270px;
+  --topNavbarHeight: 56px;
+}
+.sidebar-nav {
+  width: var(--offcanvas-width);
+}
+@media (min-width: 992px) {
+  body {
+    overflow: auto !important;
+  }
+  main {
+    margin-left: var(--offcanvas-width);
+  }
+  .sidebar-nav {
+    transform: none;
+    visibility: visible !important;
+    top: var(--topNavbarHeight);
+  }
+}
+
+</style>
+  </head>
+  <body>
+    <!-- top navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#sidebar"
+          aria-controls="offcanvasExample"
+        >
+          <span class="navbar-toggler-icon" data-bs-target="#sidebar"></span>
+        </button>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#topNavBar"
+          aria-controls="topNavBar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="topNavBar">
+          <form class="d-flex ms-auto my-3 my-lg-0">
+            <div class="input-group">
+              <input
+                class="form-control"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-primary" type="submit">
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- top navigation bar -->
+    <!-- offcanvas -->
+    <div
+      class="offcanvas offcanvas-start sidebar-nav bg-light"
+      tabindex="-1"
+      id="sidebar"
+    >
+      <div class="offcanvas-body p-0">
+        <nav class="navbar-light">
+          <ul class="navbar-nav">
+            <li>
+              <div class="text-muted small fw-bold text-uppercase px-3">
+                college dashborad
+              </div>
+            </li>
+            <li>
+              <a href="#" class="nav-link px-3 active">
+                <span>  Dashboard</span>
+              </a>
+            </li>
+            <li class="my-4"><hr class="dropdown-divider bg-dark" /></li>
+            <li>
+              <div class="text-muted small fw-bold text-uppercase px-3 mb-3">
+                Interface
+              </div>
+            </li>
+            <li>
+              <a
+                class="nav-link px-3 sidebar-link"
+                data-bs-toggle="collapse"
+                href="#layouts"
+              >
+               
+                <span>Layouts</span>
+                  </span>
+                </span>
+              </a>
+              <div class="collapse" id="layouts">
+                <ul class="navbar-nav ps-3">
+                  <li>
+                    <a href="#" class="nav-link px-3">
+                      
+                      <span>College Dashboard</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#" class="nav-link px-3">
+                
+                <span>Pages</span>
+              </a>
+            </li>
+            <li class="my-4"><hr class="dropdown-divider bg-dark" /></li>
+            <li>
+              <div class="text-muted small fw-bold text-uppercase px-3 mb-3">
+                Addons
+              </div>
+            </li>
+            <li>
+              <a href="#" class="nav-link px-3">
+                
+                <span>Charts</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link px-3">
+               
+                <span>Tables</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!-- offcanvas -->
+    <main class="mt-5 pt-3">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <h4>college Dashboard</h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3 mb-3">
+            <div class="card bg-primary text-white h-100">
+              <div class="card-body py-5">Primary Card</div>
+              <div class="card-footer d-flex">
+                View Details
+                <span class="ms-auto">
+                  <i class="bi bi-chevron-right"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="card bg-warning text-dark h-100">
+              <div class="card-body py-5">Warning Card</div>
+              <div class="card-footer d-flex">
+                View Details
+                <span class="ms-auto">
+                  <i class="bi bi-chevron-right"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="card bg-success text-white h-100">
+              <div class="card-body py-5">Success Card</div>
+              <div class="card-footer d-flex">
+                View Details
+                <span class="ms-auto">
+                  <i class="bi bi-chevron-right"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="card bg-danger text-white h-100">
+              <div class="card-body py-5">Danger Card</div>
+              <div class="card-footer d-flex">
+                View Details
+                <span class="ms-auto">
+                  <i class="bi bi-chevron-right"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <div class="card h-100">
+              <div class="card-header">
+                <span class="me-2"><i class="bi bi-bar-chart-fill"></i></span>
+                Area Chart Example
+              </div>
+              <div class="card-body">
+                <canvas class="chart" width="400" height="200"></canvas>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <div class="card h-100">
+              <div class="card-header">
+                <span class="me-2"><i class="bi bi-bar-chart-fill"></i></span>
+                Area Chart Example
+              </div>
+              <div class="card-body">
+                <canvas class="chart" width="400" height="200"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+       
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.2/dist/chart.min.js"></script>
+  </body>
+  <script>
+    const charts = document.querySelectorAll(".chart");
+    charts.forEach(function (chart) {
+    var ctx = chart.getContext("2d");
+    var myChart = new Chart(ctx, {
+    type: "bar",
+    data: {
+      labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+      datasets: [
+        {
+          label: "# of Votes",
+          data: [12, 19, 3, 5, 2, 3],
+          backgroundColor: [
+            "red",
+            "Blue",
+            "Yellow",
+            "Green",
+            "Purple",
+            "Orange",
+          ],         
+        },
+      ],
+    },
+  
+  });
+});
+  </script>
+</html>
